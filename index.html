@@ -9,9 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Ultra" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
     <header id= "home">
+
         <div class="menu">
             <span class = "bar"></span>
         </div>
@@ -20,7 +24,7 @@
             <a href="index.html" id="logo">Rao's Kitchen</a>
             <div class = "overlay">
                 <ul>
-                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#story">Our Story</a></li>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -31,13 +35,13 @@
         <div class="main-text">
             <h1>Welcome</h1>
             <h2>Rao's Kitchen</h2>
-            <a href="#" class="btn main-btn">Explore</a>
+            <a href="#menu" class="btn main-btn">Explore</a>
         </div>
     </header>
 
     <section class="our-story" id="story">
         <div class="container">
-            <div class="center add-padding-right">
+            <div class="center add-padding-right content">
                 <h1 class = "custom-font">Discover</h1>
                 <h2 class="custom-font-secondary">Our Story</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam assumenda fugiat. 
@@ -56,7 +60,7 @@
     
     <section class="our-menu" id="menu">
         <div class="container">
-            <div class="center sec">
+            <div class="center sec add-padding-left content">
                 <h1 class = "custom-font">Discover</h1>
                 <h2 class="custom-font-secondary">Our Menu</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam assumenda fugiat. 
@@ -64,11 +68,11 @@
                     quos, enim eligendi labore amet culpa.</p>
                 <a href="fullmenu.html" class="btn btn-info">Full Menu</a>
             </div>
-            <div class="image-group add-flex add-padding-right first">
-                <img src="images/menu1.jpg" alt="">
-                <img src="images/menu2.jpg" alt="">
-                <img src="images/menu3.jpg" alt="">
-                <img src="images/menu4.jpg" alt="">
+            <div class="slider">
+                <img src="images/menu1.png" alt="">
+                <img src="images/menu2.png" alt="">
+                <img src="images/menu3.png" alt="">
+                <img src="images/menu4.png" alt="">
             </div>
         </div>
     </section>
@@ -118,8 +122,16 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                adaptiveHeight: true,
+                repeat: false,
+                responsive: true,
+                useCSS: true
+            });
+        })
+    </script>
 </body>
 </html>
